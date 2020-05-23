@@ -1,0 +1,66 @@
+
+Showing logs for build [32mvivekthangathurai-testbuilder-m-wbl7l-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-qjkql[0m
+{"level":"info","ts":1590247046.0662777,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590247046.0741298,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mvivekthangathurai-testbuilder-m-wbl7l-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-xnwkt[0m
+{"level":"info","ts":1590247047.5557497,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590247047.5577426,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mvivekthangathurai-testbuilder-m-wbl7l-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mvivekthangathurai-testbuilder-m-wbl7l-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-vivekthangathurai-testbuilder-m-wbl7l-qjqhc[0m
+{"level":"info","ts":1590247053.639173,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590247053.9782343,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*****************/TestBuilder.git @ v0.0.3 in path /workspace/source"}
+
+Showing logs for build [32mvivekthangathurai-testbuilder-m-wbl7l-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:77034fff285642c47af5d6494ea84b485d6fbea2
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mvivekthangathurai-testbuilder-m-wbl7l-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mvivekthangathurai-testbuilder-m-wbl7l-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0523 15:17:36.156550      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Retrieving image manifest ********io/builder-base:latest 
+E0523 15:17:36.393557      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0523 15:17:36.397274      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest ********io/builder-base:latest 
+[36mINFO[0m[0001] Built cross stage deps: map[]                
+[36mINFO[0m[0001] Retrieving image manifest ********io/builder-base:latest 
+[36mINFO[0m[0002] Retrieving image manifest ********io/builder-base:latest 
+[36mINFO[0m[0002] Executing 0 build triggers                   
+[36mINFO[0m[0002] Checking for cached layer gcr.io/********-277315/cache:2d8859acbc61024a42c6fc6b362fd47eaa14dd4de7d542e53f4850855390085b... 
+[36mINFO[0m[0002] No cached layer found for cmd RUN echo hi    
+[36mINFO[0m[0002] Unpacking rootfs as cmd RUN echo hi requires it. 
+[36mINFO[0m[0055] RUN echo hi                                  
+[36mINFO[0m[0055] Taking snapshot of full filesystem...        
+[36mINFO[0m[0059] Resolving 51649 paths                        
+[36mINFO[0m[0470] cmd: /bin/sh                                 
+[36mINFO[0m[0470] args: [-c echo hi]                           
+[36mINFO[0m[0470] Running: [/bin/sh -c echo hi]                
+hi
+[36mINFO[0m[0470] Taking snapshot of full filesystem...        
+[36mINFO[0m[0472] Resolving 51649 paths                        
+[36mINFO[0m[0760] No files were changed, appending empty layer to config. No layer added to image. 
+[36mINFO[0m[0760] CMD ["echo","hi"]                            
+[36mINFO[0m[0760] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0760] Pushing layer gcr.io/********-277315/cache:2d8859acbc61024a42c6fc6b362fd47eaa14dd4de7d542e53f4850855390085b to cache now 
+
+Showing logs for build [32mvivekthangathurai-testbuilder-m-wbl7l-3[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source to an unshallow repository
+Generating change log from git ref 1318fd40b16ee7169d75dd386117c341adcb6258 => e2573d4c6045f1ee199d790a5d4c72b4d80e4e6a
+Associating user ***************** in users.jenkins.io with email vivek.thangathurai@appdirect.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user ***************** in users.jenkins.io
+WARNING: Failed to enrich commit 77034fff285642c47af5d6494ea84b485d6fbea2 with issues: User.jenkins.io "*****************" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email noreply@github.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 77034fff285642c47af5d6494ea84b485d6fbea2 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for *****************/TestBuilder and tag v0.0.3 so creating a new release
+Updated the release information at https://github.com/*****************/TestBuilder/releases/tag/v0.0.3
+generated: /workspace/source/templates/release.yaml
+Created Release testbuilder-0-0-3 resource in namespace ********
+Updating PipelineActivity *****************-testbuilder-master-3 with version 0.0.3
+Updated PipelineActivities *****************-testbuilder-master-3 with release notes URL: https://github.com/*****************/TestBuilder/releases/tag/v0.0.3
